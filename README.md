@@ -16,6 +16,10 @@ https://hub.docker.com/r/lsstsqre/centos/tags/
 
 
 ```bash
+# clone lsst repositories on your host machine
+cd <home_directory>/src
+git clone https://github.com/lsst/obs_cfht.git
+# Open a shell inside a container containing LSST stack
 docker run -ti -v -v <home_directory>/src:/home/vagrant/src lsstsqre/centos:7-stack-lsst_distrib-w_2016_20
 # In the container, load LSST stack environment
 . /opt/lsst/software/stack/loadLSST.bash
